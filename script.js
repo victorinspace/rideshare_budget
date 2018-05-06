@@ -1,68 +1,27 @@
-/* initialize calculation variables */
-var day;
-var tier1Rides;
-var tier2Rides;
-var tier3Rides;
 
-/* averages */
-var average = {
-	gasPrice: 2.68, //$
-	milesPerRide: 5, //miles
-	mpg: 28, //sonata
-	gasTank: 13 //gallons
+/*
+Using US metrics. 
+- Average miles per gallon: https://www.reuters.com/article/us-autos-emissions/u-s-vehicle-fuel-economy-rises-to-record-24-7-mpg-epa-idUSKBN1F02BX
+- Average gas tank size: https://en.wikipedia.org/wiki/Fuel_tank
+- Average gas costs: https://gasprices.aaa.com/
+- Average rideshare trip ride: https://ride.guru/lounge/p/what-is-the-average-trip-distance-for-an-uber-or-lyft-ride
+*/
+
+const average = {
+	mpg: 24.7, 
+	gasTank: 15,
+	gasPrice: 2.814, 
+	trip: 6
 };
 
 /* calculate costs; display results */
 function displayResult() {
+	
+	let rideCount = getElementById("rideCount");
+	
+	
 	var driverTotal = $("#totalRides").val(); //drivers ride totals
 	var dayOfWeek = $("#dayOfWeek").val(); //date of pickup
-
-	switch (dayOfWeek) {
-		case "Monday":
-			day = 7;
-			tier1Rides = 125;
-			tier2Rides = 105;
-			tier3Rides = 85;
-			break;
-		case "Tuesday":
-			day = 6;
-			tier1Rides = 108;
-			tier2Rides = 90;
-			tier3Rides = 73;
-			break;
-		case "Wednesday":
-			day = 5;
-			tier1Rides = 90;
-			tier2Rides = 75;
-			tier3Rides = 61;
-			break;
-		case "Thursday":
-			day = 4;
-			tier1Rides = 72;
-			tier2Rides = 60;
-			tier3Rides = 49;
-			break;
-		case "Friday":
-			day = 3;
-			tier1Rides = 54;
-			tier2Rides = 45;
-			tier3Rides = 37;
-			break;
-		case "Saturday":
-			day = 2;
-			tier1Rides = 36;
-			tier2Rides = 30;
-			tier3Rides = 25;
-			break;
-		case "Sunday":
-			day = 1;
-			tier1Rides = 125;
-			tier2Rides = 105;
-			tier3Rides = 85;
-			break;
-		default:
-			console.log("No date selected.");
-	}
 
 	/* GAS PRICE FOR RIDES COMPLETED */
 	function ridesCompleted() {

@@ -13,40 +13,18 @@
       <div class="form">
    
        <form class="results">
-        <h1>EXPRESS DRIVE</h1>
-        <h2><i>Budget Tool</i></h2><br>
-        <h3>What You've Spent:</h3>
+        <h1>Rideshare Gas Budget</h1>
+        <h3>Amount to save for gas:</h3>
         <h5 id="ridesCompleted"></h5>
    
-        <!-- Tier Results -->
-        <h3 id="tierHeading"></h3>
-        <img src="https://i.imgur.com/9gJSOiq.png" title="ride incentives" />
-        <h5 id="result1"></h5>
-        <img src="https://i.imgur.com/9gJSOiq.png" title="ride incentives" />
-        <h5 id="result2"></h5>
-        <img src="https://i.imgur.com/9gJSOiq.png" title="ride incentives" />
-        <h5 id="result3"></h5>
-   
         <button class="calculate">Recalculate</button>
-        <p style="font-size: 15px;"><i>*Disclaimer: Rental Reward Amounts reflected here are based on a full 7 day Rental Week<br></i></p>
        </form>
             
        <form class="rides-form">
-        <h1>EXPRESS DRIVE</h1>
-        <h2><i>Budget Tool</i></h2><br>
-        <h5>RIDES COMPLETED</h5>
-        <input type="number" id="totalRides" placeholder="Total Rides Completed" min=0 max=500 required/>
+        <h1>Ridesshare Gas Budget</h1>
+        <h5>Rides Completed:</h5>
+        <input type="number" id="rideCount" placeholder="Your Current Ride Count" min=0 max=1000 required/>
    
-        <h5>DAY OF THE WEEK:</h5>
-        <select id="dayOfWeek">
-                   <option vale="Monday" selected>Monday</option> 
-                   <option vale="Tuesday">Tuesday</option>
-                   <option vale="Wednesday">Wednesday</option>
-                   <option vale="Thursday">Thursday</option>
-                   <option vale="Friday">Friday</option>
-                                   <option vale="Saturday">Saturady</option>
-                                                   <option vale="Sunday">Sunday</option>
-               </select>
         <span class="validity"></span>
         <button class="calculate" onclick="displayResult()">Calculate</button>
        </form>
